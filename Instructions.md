@@ -1,16 +1,31 @@
-KUBERNETES DEPLOYMENT STEPS:
+## DOCKER DEPLOYMENT STEPS:
 
-1. Copy the files from sig/kubernetes_yaml_files to the host where you want to deploy
-2. Create the response deployment
-   kubectl apply -f response-deployment.yaml
-4. Create the response service
-   kubectl apply -f response-service.yaml
-6. Create the display deployment
-   kubectl apply -f display-deployment.yaml
-8. Create the display service
-   kubectl apply -f display-service.yaml
+### PULL THE RESPONSE IMAGE  
+    `docker pull bshreya639/response:1.0`  
 
-   DEPLOYMENT SCREENGRABS:
+### PULL THE DISPLAY IMAGE
+    `docker pull bshreya639/display:1.0`
+
+### TO RUN THE RESPONSE CONTAINER  
+   `docker run --name response -p 8001:80 -d bshreya639/response:1.0`
+   
+### TO RUN THE DISPLAY CONTAINER  
+   `docker run --name display -p 8002:80 -e PORT='8001' -e IP='10.0.50.108' -d bshreya639/display:1.0`
+      
+
+## KUBERNETES DEPLOYMENT STEPS:
+
+1. Copy the files from sig/kubernetes_yaml_files to the host where you want to deploy  
+2. Create the response deployment  
+   `kubectl apply -f response-deployment.yaml`  
+4. Create the response service  
+   `kubectl apply -f response-service.yaml`  
+6. Create the display deployment  
+   `kubectl apply -f display-deployment.yaml`  
+8. Create the display service  
+   `kubectl apply -f display-service.yaml`    
+
+DEPLOYMENT SCREENGRABS:
 
    ![image](https://github.com/bshreya639/sig/assets/18439044/8086002c-9159-40f7-9fc4-1a6cfba26f49)
 
