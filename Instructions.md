@@ -1,4 +1,4 @@
-## DOCKER DEPLOYMENT STEPS:  
+## A. DOCKER DEPLOYMENT STEPS:  
 The response container must be created first followed by the display container. $HOST env variable whch is required in display container must be replaced with the name of the host where the docker containers are created.
 
 ### PULL THE RESPONSE IMAGE  
@@ -31,7 +31,7 @@ The response container must be created first followed by the display container. 
 
  
 
-## KUBERNETES DEPLOYMENT STEPS:  
+## B. KUBERNETES DEPLOYMENT STEPS:  
 The response deployment and service must be created first followed by the display deployment and service.
 
 1. Copy the files from sig/kubernetes_yaml_files to the host where you want to deploy  
@@ -61,7 +61,32 @@ The response deployment and service must be created first followed by the displa
 
    ![image](https://github.com/bshreya639/sig/assets/18439044/791fc62a-5083-40c9-bbf5-14113ac67d90)  
 
-   ![image](https://github.com/bshreya639/sig/assets/18439044/75b58c35-9789-4594-8824-9c97041ef36e)
+   ![image](https://github.com/bshreya639/sig/assets/18439044/75b58c35-9789-4594-8824-9c97041ef36e)  
+
+   ### C. SCRIPT DEPLOYMENT STEPS  
+
+   ### PRE-REQUISITES  
+   * Install PHP 7.4 or above
+     `apt install php`  
+   * Install apache2 webserver
+     `apt install apache2`  
+   * Create the directory structure if not present: /var/www/html
+   * Verify the user www-data is present
+
+   ### Note  
+   The script is written and deployed through a non root user and hence includes commands with sudo.  
+
+   ### STEPS FOR SCRIPT DEPLOYMENT
+
+   * Copy the following folder (including all files and subfolders inside) from the repository: script_for_deployment_automation
+   * execute the following from the terminal
+     `./deploy.sh`
+
+   ### VALIDATION AND BROWSER TEST
+   
+
+
+   
 
 
    
