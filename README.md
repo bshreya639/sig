@@ -2,7 +2,7 @@
 ## Repository Contents:
 1. application_1_response: This folder contains the source code used to implement the software for task 1. The application has been named response. The files are shared just to look at the code.
 2. application_1_display: This folder contains the source code used to implement the software for task 4. The application has been named display. The files are shared just to look at the code. The $url variable in this file has been allocated a sample value and should not be actually executed.
-3. docker_deployment files: This folder contains everything required to create the containers for the response and display applications. This is related to task 2.
+3. docker_deployment files: This folder contains everything required to build the images for the response and display applications. The deployment instructions only share the steps to run the containers as the images are uploaded to dockerhub, so there is no need to build them locally. This is related to task 2.
 4. kubernetes_yaml_files: This folder contains everything required to create the deployments for the response and display applications in a sample kubernetes cluster. This is related to task 3.
 5. script_deployment: This folder contains everything required to execute the script deployment. This is related to task 5.
 
