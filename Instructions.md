@@ -66,23 +66,46 @@ The response deployment and service must be created first followed by the displa
    ### C. SCRIPT DEPLOYMENT STEPS  
 
    ### PRE-REQUISITES  
-   * Install PHP 7.4 or above
+   1. Install PHP 7.4 or above
      `apt install php`  
-   * Install apache2 webserver
-     `apt install apache2`  
-   * Create the directory structure if not present: /var/www/html
-   * Verify the user www-data is present
+   2. Install apache2 webserver
+     `apt install apache2`
+   3. The apache2 webserver must be running on port 80
+   4. Verify the user www-data is present
 
-   ### Note  
+   ### NOTE  
    The script is written and deployed through a non root user and hence includes commands with sudo.  
 
    ### STEPS FOR SCRIPT DEPLOYMENT
 
-   * Copy the following folder (including all files and subfolders inside) from the repository: script_for_deployment_automation
-   * execute the following from the terminal
-     `./deploy.sh`
+   1. Copy the following folder (including all files and subfolders inside) from the repository: script_for_deployment_automation
+   2. execute the following from the home directory of your terminal  
+     `./script.sh`
+
 
    ### VALIDATION AND BROWSER TEST
+   1. Check the following files are present in /var/www/html directory:
+      * index.php  
+      * response.php  
+      * display.php
+        
+   2. The $HOST:80 url shows the index.php
+   3. The first application is available at $HOST:80/response.php where $HOST must be replaced with the ip address of the server where the script is deployed.  
+   4. The second application is available at $HOST:80/display.php where $HOST must be replaced with the ip address of the server where the script is deployed.  
+
+  ### SCRIPT DEPLOYMENT SCREENGRABS  
+
+  ![image](https://github.com/bshreya639/sig/assets/18439044/5bb06d6e-ab81-40f2-bed4-98476737d51b)  
+
+  ![image](https://github.com/bshreya639/sig/assets/18439044/e3c9ecdc-c812-482d-a005-e44c08c4e14e)  
+
+  ![image](https://github.com/bshreya639/sig/assets/18439044/a9fe5566-b75b-45b0-820f-7a36bb8ed9a1)  
+
+
+
+  
+  
+  
    
 
 
