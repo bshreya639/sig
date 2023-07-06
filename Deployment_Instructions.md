@@ -95,6 +95,8 @@ The response deployment and service must be created first followed by the displa
 
   ### SCRIPT DEPLOYMENT SCREENGRABS  
 
+  ![image](https://github.com/bshreya639/sig/assets/18439044/10b7e2af-1d47-4152-af26-159b7640c44b)  
+
   ![image](https://github.com/bshreya639/sig/assets/18439044/5bb06d6e-ab81-40f2-bed4-98476737d51b)  
 
   ![image](https://github.com/bshreya639/sig/assets/18439044/e3c9ecdc-c812-482d-a005-e44c08c4e14e)  
