@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: response
+spec:
+  selector:
+    matchLabels:
+      app: response
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: response
+    spec:
+      containers:
+        - name: response
+          image: bshreya639/response:1.0
+          ports:
+            - containerPort: 80
