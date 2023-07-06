@@ -1,5 +1,5 @@
 ## A. DOCKER DEPLOYMENT STEPS:  
-The response container must be created first followed by the display container. $HOST env variable whch is required in display container must be replaced with the name of the host where the docker containers are created.
+The response container must be created first followed by the display container. $HOST env variable whch is required in display container must be replaced with the name of the host where the docker containers are created. The folder docker_deployment_files contain all the artifacts used to create the images, however the final images are already uploaded to dockerhub, hence the deployment steps outline how to deploy the containers using the image from dockerhub repository.
 
 ### PULL THE RESPONSE IMAGE  
 `docker pull bshreya639/response:1.0`  
